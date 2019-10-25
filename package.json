@@ -9,13 +9,13 @@
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
     "start:debug": "nodemon --config nodemon-debug.json",
-    "start:dev": "nodemon --watch src -e ts --exec npm start",
+    "start:dev":  "nodemon --watch src -e ts --exec npm start",
     "start:prod": "node dist/main.js",
-    "test": "jest --config ./test/config/jest.config.js --detectOpenHandles --runInBand",
-    "test:cov": "jest --config ./test/config/jest.config.js --coverage --runInBand",
-    "test:e2e": "jest --runInBand --watchAll --verbose=false --config ./test/config/jest-e2e.js",
-    "test:unit": "jest --config ./test/config/jest.config.js --runInBand --watchAll  --verbose=false --config ./test/config/jest-spec.js",
-    "test:watch": "jest --config ./test/config/jest.config.js --watch --runInBand"
+    "test":       "jest --detectOpenHandles --runInBand --config ./test/config/jest.config.js",
+    "test:cov":   "jest --coverage --runInBand --config ./test/config/jest.config.js",
+    "test:e2e":   "jest --runInBand --watchAll --verbose=false --config ./test/config/jest-e2e.js",
+    "test:unit":  "jest --runInBand --watchAll  --verbose=false --config ./test/config/jest.unit.config.js",
+    "test:watch": "jest --watch --runInBand --config ./test/config/jest.config.js"
   },
   "repository": {
     "type": "git",
