@@ -13,7 +13,7 @@
     "start:prod": "node dist/server.js",
     "test": "jest --detectOpenHandles --runInBand --config ./test/config/jest.config.js",
     "test:cov": "jest --coverage --runInBand --config ./test/config/jest.config.js",
-    "test:e2e": "jest --runInBand --watchAll --verbose=false --config ./test/config/jest-e2e.js",
+    "test:e2e": "jest --runInBand --watchAll --verbose=true --config ./test/config/jest.e2e.config.js",
     "test:unit": "jest --runInBand --watchAll  --verbose=false --config ./test/config/jest.unit.config.js",
     "test:watch": "jest --watch --runInBand --config ./test/config/jest.config.js"
   },
