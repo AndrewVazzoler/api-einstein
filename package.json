@@ -1,0 +1,60 @@
+{
+  "name": "api-einstein",
+  "version": "1.0.0",
+  "description": "Simples API em Node.js (express) que possui um único endpoint /api/solve. Onde rota receber um array de inteiros A e um inteiro K, e responde se é possível que a soma de dois números distintos de A resultem em K.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:debug": "nodemon --config nodemon-debug.json",
+    "start:dev": "nodemon --watch src -e ts --exec npm start",
+    "start:prod": "node dist/main.js",
+    "test": "jest --config ./test/config/jest.config.js --detectOpenHandles --runInBand",
+    "test:cov": "jest --config ./test/config/jest.config.js --coverage --runInBand",
+    "test:e2e": "jest --runInBand --watchAll --verbose=false --config ./test/config/jest-e2e.js",
+    "test:unit": "jest --config ./test/config/jest.config.js --runInBand --watchAll  --verbose=false --config ./test/config/jest-spec.js",
+    "test:watch": "jest --config ./test/config/jest.config.js --watch --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewVazzoler/api-einstein.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewVazzoler/api-einstein/issues"
+  },
+  "homepage": "https://github.com/AndrewVazzoler/api-einstein#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@types/chai": "^4.2.4",
+    "@types/express": "^4.17.1",
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.7",
+    "@types/supertest": "^2.0.8",
+    "chai": "^4.2.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "jest-extended": "^0.11.2",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.18.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "tslint-no-unused-expression-chai": "^0.1.4",
+    "typescript": "^3.6.4"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
