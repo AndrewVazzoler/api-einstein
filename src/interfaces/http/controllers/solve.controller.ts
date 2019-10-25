@@ -22,9 +22,12 @@ export const solveIntegers = (req, res) => {
       status: 'failed',
     });
   } catch (error) {
-    return res.json({
-      message: error.message,
-      status: 'error',
-    });
+    return res.json(
+      {
+        message: error.message,
+        status: 'error',
+      },
+      500,
+    );
   }
 };
