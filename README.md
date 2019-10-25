@@ -2,8 +2,6 @@
 
 Simples API RESTful criada com NodeJS + Express que possui um objetivo e único endpoint /api/solve. Onde rota receber um array de inteiros A e um inteiro K, e responde se é possível que a soma de dois números distintos de A resultem em K.
 
-O principal objetivo desta API é apens
-
 ## Sobre este projeto
 
 Este projeto faz parte do meu portfólio pessoal, portanto, ficarei feliz se você puder me fornecer algum feedback sobre o projeto, código, estrutura ou qualquer coisa que você possa relatar que possa me tornar um desenvolvedor melhor!
