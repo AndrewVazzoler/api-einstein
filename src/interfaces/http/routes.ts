@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { solveIntegers } from './controllers/solve.controller';
 
 const routes = Router();
 
@@ -9,5 +10,7 @@ routes.get('/', (req, res) => {
 routes.get('/health', (req, res) => {
   return res.sendStatus(200);
 });
+
+routes.post('/api/solve', solveIntegers);
 
 export default routes;

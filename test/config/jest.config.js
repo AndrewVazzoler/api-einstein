@@ -1,9 +1,8 @@
 module.exports = {
   moduleFileExtensions: ['js', 'json', 'ts'],
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.js'],
+  collectCoverageFrom: ['src/**/*.{ts,js}'],
   coveragePathIgnorePatterns: [],
-  coverageReporters: ['html', 'lcov', 'text-summary'],
   rootDir: '../../',
   setupFilesAfterEnv: ['<rootDir>/test/config/setup.ts'],
   testEnvironment: 'node',
